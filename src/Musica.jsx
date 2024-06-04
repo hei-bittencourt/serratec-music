@@ -1,6 +1,7 @@
 import React from "react";
 import Artista from "./Artista";
 import Titulo from "./Titulo";
+import Gostei from "./Gostei";
 
 class Musica extends React.Component {
     render() {
@@ -17,6 +18,14 @@ class Musica extends React.Component {
             flex: 1
          };
 
+         const midia = {
+            display: "block",
+            width: "150px",
+            height: "100px",
+            padding: "1px",
+            objectFit: "cover"
+         };
+
          const musica = this.props.item;
 
         return (
@@ -24,9 +33,10 @@ class Musica extends React.Component {
             <div style={info}>
                 <Artista  nome = {this.props.item.artista}/>
                 <Titulo titulo = {musica.titulo} />
+                <Gostei />
             </div>
             <div>
-                <img src = {musica.foto} alt="Capa do Album" style={{display: "block", width: "150px", height: "100px", padding: "1px"}} />
+                <img src = {musica.foto} alt="Capa do Album" style={midia} />
             </div>
         </section>
         );
