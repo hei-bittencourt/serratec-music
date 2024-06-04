@@ -33,7 +33,7 @@ class Musica extends React.Component {
             <div style={info}>
                 <Artista  nome = {this.props.item.artista}/>
                 <Titulo titulo = {musica.titulo} />
-                <Gostei />
+                <Gostei titulo = {musica.titulo} />
             </div>
             <div>
                 <img src = {musica.foto} alt="Capa do Album" style={midia} />

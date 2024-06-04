@@ -4,14 +4,15 @@ class Gostei extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { valor: "👍" };
+    this.state = { valor: "👍", data: new Date() };
   }
 
   render() {
+    console.log("render ", this.props.titulo)
     return(
-        <>
-      <button>🎵</button> {this.state.valor}
-    </>
+        <div>
+      <button onClick={() => this.setState({valor: "⭐"})}>🎵</button> {this.state.valor}
+    </div>
     ); 
   }
 }
